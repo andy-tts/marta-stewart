@@ -14,6 +14,7 @@ class LocationsController < ApplicationController
     buses = HTTParty.get("http://developer.itsmarta.com/BRDRestService/RestBusRealTimeService/GetAllBus")
     @nearby_buses = []
     buses.each do |bus|
+      # puts "#{@location.latitude}, #{@location.longitude}, #{bus['LATITUDE'].to_f}, #{bus['LONGITUDE'].to_f}"
       if nearby(@location.latitude, @location.longitude, bus['LATITUDE'].to_f, bus['LONGITUDE'].to_f)
         @nearby_buses.push(bus)
       end

@@ -7,8 +7,9 @@
 
 <h2> The closest Buses are: </h2>
 <% @nearby_buses.each do |bus| %>
-	<p><%="Bus \#" + bus['VEHICLE'].to_s + " is going " + bus['DIRECTION'].to_s%></p>
+	<p><%="Bus \#" + bus['VEHICLE'].to_s + " is on route \#" + bus['ROUTE'].to_s + ", going " + bus['DIRECTION'].to_s + " to " + bus['TIMEPOINT'].to_s%></p>
 <%end%>
+	<p>There are <%= @nearby_buses.count%> buses near you!</p>
 
 <%= link_to 'Edit', edit_location_path(@location) %> |
 <%= link_to 'Back', locations_path %>
