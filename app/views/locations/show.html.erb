@@ -6,6 +6,7 @@
 </p>
 
 <h2> The closest Buses Are... </h2>
+<h5> There are <%= @nearby_buses.count %> buses near you</h5>
 
 <%= link_to 'Edit', edit_location_path(@location) %> |
 <%= link_to 'Back', locations_path %>
