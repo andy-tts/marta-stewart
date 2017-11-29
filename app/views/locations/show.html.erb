@@ -6,7 +6,23 @@
 </p>
 
 <h2> The closest Buses Are... </h2>
-<h5> There are <%= @nearby_buses.count %> buses near you</h5>
+
+<% if @nearby_buses.count == 0 %>
+	<p>
+		You must be outside of Hotlanta. Are you in the swamp?
+	</p>
+<% else %>
+	<h5> There are <%= @nearby_buses.count %> buses near you</h5>
+	<ul>
+		<% @nearby_buses.each do |bus| %>
+			<li>
+				<strong>Route: </strong><%= bus['ROUTE'] %> <strong>Vehicle #:</strong><%= bus['VEHICLE'] %> <strong>Direction:</strong> <%= bus['DIRECTION'] %>
+			</li>
+		<% end %>
+	</ul>
+<% end %> 
+
+
 
 <%= link_to 'Edit', edit_location_path(@location) %> |
 <%= link_to 'Back', locations_path %>
