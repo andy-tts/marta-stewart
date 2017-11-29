@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to our MARTA rails app for class
 
-Things you may want to cover:
+We'll be starting off with using buses from http://developer.itsmarta.com/BRDRestService/RestBusRealTimeService/GetAllBus
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+We want to use the MARTA rails api but it hasn't been 24 hours since we signed up so I guess they're going in at the last minute
